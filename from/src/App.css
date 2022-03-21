@@ -1,0 +1,65 @@
+.App {
+  height: 100vh;
+  width: 100%;
+  background-image: url("./images/fondo.jpg");
+  background-position: center top;
+  background-attachment: fixed;
+  background-repeat: no-repeat, no-repeat,no-repeat;
+}
+
+body {
+  height: 100vh;
+  width: 100%;
+  text-align: center;
+  position: relative;
+}
+
+.Fondo-Portada {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -100;
+}
+
+.Logo {
+  height: 85vh;
+  width: 75%;
+  background-position: center;
+  margin: 0% 0% 0% 30% ;
+  margin-bottom: 50px;
+  z-index: 10;
+}
+
+.tablas {
+  top: 0;
+  width: 90%;
+  position: absolute;
+  z-index: 100;
+}
+
+.form {
+  background-color: #edeff1;
+  border-radius: 3%;
+  margin: 3% 0% 0% 15%;
+  padding: 5%;
+  width: 70%;
+  height: 95vh;
+}
+
+.numero{
+  background-color: #49157e;
+  text-align: center;
+  width: 10%;
+  border-radius: 50%;
+  color: white;
+}
+
+.logoHome{
+  padding-left: 20px;
+}
+@media only screen and (max-width: 767px) {
+
+  
+}
