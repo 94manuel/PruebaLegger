@@ -136,7 +136,7 @@ const getip = async () => {
               name='NombreCliente'
               value={NombreCliente}
               required={true}
-              onChange={(e) => setNombreCliente(e.target.value.replace(/[^a-zA-Z\d]/ig, ""))}
+              onChange={(e) => setNombreCliente(e.target.value.replace(/[^a-zA-Z/á/é/í/ó/ó/ñ]/ig, ""))}
             />
           </Col>
         </Row>
