@@ -3,7 +3,7 @@
   header("Access-Control-Allow-Headers: Origin, X-Requested-With, Content-Type, Accept");
   header('Access-Control-Allow-Methods: GET, POST, PUT, DELETE');
   $NombreCliente     = $_POST['NombreCliente'];
-  $NIT 				 = $_POST['NIT'];
+  $NIT 				       = $_POST['NIT'];
   $NombreDelPunto    = $_POST['NombreDelPunto'];
   $NombreDelEquipo   = $_POST['NombreDelEquipo'];
   $Ciudad            = $_POST['Ciudad'];
@@ -18,4 +18,6 @@
 
   $sql = "INSERT INTO prueba (NombreCliente,NIT,NombreDelPunto,NombreDelEquipo,Ciudad,Promotor,RTC,Capitan) VALUES ('$NombreCliente','$NIT','$NombreDelPunto','$NombreDelEquipo','$Ciudad','$Promotor','$RTC','$Capitan')";
   $mysqli->query($sql);
+  $mysqli->close();
+  echo "OK";
 ?>

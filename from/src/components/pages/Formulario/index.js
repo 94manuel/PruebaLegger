@@ -69,30 +69,26 @@ const getip = async () => {
       setExcel(customers());
       const requestOptions = {
         method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ 
-          NombreCliente: NombreCliente,
-          NIT: Nit,
-          NombreDelPunto: NombreDelPunto,
-          NombreDelEquipo: NombreDelEquipo,
-          Ciudad: Ciudad,
-          Promotor: Promotor,
-          RTC: RTC,
-          Capitan: Capitan,
-        })
+        headers: new Headers({
+          'Content-Type': 'application/x-www-form-urlencoded'}),
+        body: "NombreCliente="+NombreCliente+"&"+
+        "NIT="+ Nit+"&"+
+        "NombreDelPunto="+ NombreDelPunto+"&"+
+        "NombreDelEquipo="+ NombreDelEquipo+"&"+
+        "Ciudad="+ Ciudad+"&"+
+        "Promotor="+ Promotor+"&"+
+        "RTC="+ RTC+"&"+
+        "Capitan="+ Capitan,
     };
       
     await fetch('http://127.0.0.1/', requestOptions)
         .then(response => response.json()).then(res => {
           if (res.success) {
-            //mensaje correcto
+            console.log(res);
           }else{
           //mensaje de error
           }
-        })
-        /*.catch(function() {
-          alert("Can't connect to backend try latter");
-        });*/
+        });
     } else {
       
     }
